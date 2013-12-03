@@ -1,0 +1,23 @@
+<inkscape-extension>
+  <_name>Textbox layout</_name>
+  <id>org.greygreen.inkscape.effects.textbox</id>
+  <dependency type="executable" location="extensions">textbox.py</dependency>
+  <dependency type="executable" location="extensions">inkex.py</dependency>
+  <param name="description" type="description">
+Select pieces of text and their corresponding boxes.
+Specify padding in px. Boxes will be resized to fit
+nearest (based on centers) pieces of text.
+</param>
+  <param name="left" type="string" _gui-text="Left">20</param>
+  <param name="right" type="string" _gui-text="Right">20</param>
+  <param name="top" type="string" _gui-text="Top">20</param>
+  <param name="bottom" type="string" _gui-text="Bottom">24</param>
+  <effect>
+    <effects-menu>
+      <submenu _name="Arrange"/>
+    </effects-menu>
+  </effect>
+  <script>
+    <command reldir="extensions" interpreter="python">textbox.py</command>
+  </script>
+</inkscape-extension>
